@@ -9,10 +9,7 @@ block content
     .form-group
       label.col-sm-3.control-label(for='email') Email (Login)
       .col-sm-4
-        if user.profile.rank === 'Recruit'
-          input.form-control(type='email', name='email', id='email', value='#{user.email}')
-        else
-          input.form-control(type='email', name='email', id='email', value='#{user.email}', disabled)
+        input.form-control(type='email', name='email', id='email', value='#{user.email}')
 
   if secrets.localAuth
     .page-header
