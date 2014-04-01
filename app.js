@@ -17,13 +17,14 @@ var connectAssets = require('connect-assets');
 
 var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
+var ownerController = require('./controllers/owner');
 
 /**
  * API keys + Passport configuration.
  */
 
 var secrets = require('./config/secrets');
-var passportConf = require('./config/passport');
+var passportConf = require('./config/owner_passport');
 
 /**
  * Create Express server.
@@ -114,6 +115,14 @@ app.get('/account', passportConf.isAuthenticated, userController.getAccount);
 app.post('/account/profile', passportConf.isAuthenticated, userController.postUpdateProfile);
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
+app.get('/signup', ownerController.getSignup);
+app.post('/signup', ownerController.postSignup);
+app.get('/login', ownerController.getLogin);
+app.post('/login', ownerController.postLogin);
+app.get('/logout', ownerController.logout);
+app.get('/account', passportConf.isAuthenticated, ownerController.getAccount);
+app.post('/account/password', passportConf.isAuthenticated, ownerController.postUpdatePassword);
+app.post('/account/delete', passportConf.isAuthenticated, ownerController.postDeleteAccount);
 
 /**
  * Start Express server.
