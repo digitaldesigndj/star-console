@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .page-header
+    h1 Boundstar Purchase Manager
+  .row
+    .well.col-sm-2#connections
+        h3 Right Now
+        p 
+          span #{purchases.length}
+        h5 purchases
+    .col-sm-10
+      legend Purchases
+      table#visits.table.table-bordered.table-striped.table-condensed
+        thead
+          tr
+            td Name
+            td Offer Code
+            td Email 
+            td Price
+            td Claimed
+        tbody
+          each purchase in purchases
+            //- p=JSON.stringify(purchase)
+            tr
+              td #{purchase.full_name}
+              td #{purchase.offer_code}
+              td #{purchase.email}
+              td #{purchase.price}
+              td #{purchase.claimed}

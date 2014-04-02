@@ -19,6 +19,7 @@ var homeController = require('./controllers/home');
 var ownerController = require('./controllers/owner');
 var worldsController = require('./controllers/worlds');
 var playersController = require('./controllers/players');
+var purchasesController = require('./controllers/purchases');
 
 /**
  * API keys + Passport configuration.
@@ -105,6 +106,7 @@ app.get('/', homeController.index);
 
 app.get('/worlds', worldsController.index);
 app.get('/players', playersController.index);
+app.get('/purchases', purchasesController.index);
 
 app.get('/signup', ownerController.getSignup);
 app.post('/signup', ownerController.postSignup);
