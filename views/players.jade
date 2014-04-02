@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .page-header
+    h1 Boundstar Player Manager
+  .row
+    .well.col-sm-2#connections
+        h3 Right Now
+        p 
+          span #{players.length}
+        h5 player accounts
+    .col-sm-10
+      legend Players
+      table#visits.table.table-bordered.table-striped.table-condensed
+        thead
+          tr
+            td Character
+            td Rank
+            td Forum
+            td Rep
+            td Posts
+            td Votes
+        tbody
+          each player in players
+            tr
+              td #{player.profile.player}
+              td #{player.profile.rank}
+              td #{player.profile.forum}
+              td #{player.profile.forum_rep}
+              td #{player.profile.forum_posts}
+              td #{player.profile.thismonth_votes}

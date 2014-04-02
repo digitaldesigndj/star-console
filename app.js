@@ -18,6 +18,7 @@ var connectAssets = require('connect-assets');
 var homeController = require('./controllers/home');
 var ownerController = require('./controllers/owner');
 var worldsController = require('./controllers/worlds');
+var playersController = require('./controllers/players');
 
 /**
  * API keys + Passport configuration.
@@ -103,6 +104,8 @@ app.use(express.errorHandler());
 app.get('/', homeController.index);
 
 app.get('/worlds', worldsController.index);
+app.get('/players', playersController.index);
+
 app.get('/signup', ownerController.getSignup);
 app.post('/signup', ownerController.postSignup);
 app.get('/login', ownerController.getLogin);
