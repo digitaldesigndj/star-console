@@ -105,10 +105,10 @@ app.use(express.errorHandler());
 
 app.get('/', homeController.index);
 
-app.get('/worlds', worldsController.index);
-app.get('/players', playersController.index);
-app.get('/users', usersController.index);
-app.get('/purchases', purchasesController.index);
+app.get('/worlds', passportConf.isAuthenticated, worldsController.index);
+app.get('/players', passportConf.isAuthenticated, playersController.index);
+app.get('/users', passportConf.isAuthenticated, usersController.index);
+app.get('/purchases', passportConf.isAuthenticated, purchasesController.index);
 
 app.get('/signup', ownerController.getSignup);
 app.post('/signup', ownerController.postSignup);
