@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .page-header
+    h1 Boundstar User Manager
+  .row
+    .well.col-sm-2#connections
+        h3 Right Now
+        p 
+          span #{users.length}
+        h5 users
+    .col-sm-10
+      legend Users
+      table#visits.table.table-bordered.table-striped.table-condensed
+        thead
+          tr
+            td Offer
+            td Email
+            td Tokens
+            td Server
+            td Destoryed
+        tbody
+          each user in users
+            //- p=JSON.stringify(user)
+            tr
+              td #{user.special_redeemed}
+              td #{user.email}
+              td #{user.server_tokens}
+              td #{user.server}
+              td #{user.destoryed_servers.length}
