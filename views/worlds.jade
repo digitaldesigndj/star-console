@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .page-header
+    h1 Boundstar World Manager
+  .row
+    .well.col-sm-2#connections
+        h3 Right Now
+        p 
+          span #{worlds.length}
+        h5 worlds
+    .col-sm-10
+      legend Worlds
+      table#visits.table.table-bordered.table-striped.table-condensed
+        thead
+          tr
+            td Coords
+            td Nickname
+            td Owner
+            td Name
+            td Saves
+        tbody
+          each world in worlds
+            //- p=JSON.stringify(world)
+            tr
+              td #{world.world_coords}
+              td #{world.nickname}
+              td #{world.owner}
+              td #{world.name}
+              td #{world.saves.length}
