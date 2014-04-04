@@ -39,7 +39,10 @@ block content
               td #{player.profile.forum_rep}
               td #{player.profile.forum_posts}
               td #{player.profile.thismonth_votes}
-              td #{player.profile.system.size}
+              if player.profile.system
+                td #{player.profile.system.size}
+              else
+                td 0
               td #{player.profile.ip}
               td #{player.profile.country}
               td #{player.profile.region}
