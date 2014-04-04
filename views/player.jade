@@ -1,0 +1,152 @@
+extends layout
+
+block content
+  .page-header
+    h3 #{title}
+  form.form-horizontal(action='/player/#{email}', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='alltime_votes') alltime_votes
+      .col-sm-4
+        input.form-control(type='alltime_votes', name='alltime_votes', id='alltime_votes', value='#{player.profile.alltime_votes}')
+    .form-group
+      label.col-sm-3.control-label(for='alt_characters') alt_characters
+      .col-sm-4
+        textarea.form-control(type='alt_characters', name='alt_characters', id='alt_characters') #{player.profile.alt_characters}
+    .form-group
+      label.col-sm-3.control-label(for='city') city
+      .col-sm-4
+        input.form-control(type='city', name='city', id='city', value='#{player.profile.city}')
+    .form-group
+      label.col-sm-3.control-label(for='country') country
+      .col-sm-4
+        input.form-control(type='country', name='country', id='country', value='#{player.profile.country}')
+    .form-group
+      label.col-sm-3.control-label(for='forum') forum
+      .col-sm-4
+        input.form-control(type='forum', name='forum', id='forum', value='#{player.profile.forum}')
+    .form-group
+      label.col-sm-3.control-label(for='forum_posts') forum_posts
+      .col-sm-4
+        input.form-control(type='forum_posts', name='forum_posts', id='forum_posts', value='#{player.profile.forum_posts}')
+    .form-group
+      label.col-sm-3.control-label(for='forum_rep') forum_rep
+      .col-sm-4
+        input.form-control(type='forum_rep', name='forum_rep', id='forum_rep', value='#{player.profile.forum_rep}')
+    .form-group
+      label.col-sm-3.control-label(for='hostname') hostname
+      .col-sm-4
+        input.form-control(type='hostname', name='hostname', id='hostname', value='#{player.profile.hostname}')
+    .form-group
+      label.col-sm-3.control-label(for='ip') ip
+      .col-sm-4
+        input.form-control(type='ip', name='ip', id='ip', value='#{player.profile.ip}')
+    .form-group
+      label.col-sm-3.control-label(for='loc') loc
+      .col-sm-4
+        input.form-control(type='loc', name='loc', id='loc', value='#{player.profile.loc}')
+    .form-group
+      label.col-sm-3.control-label(for='location') location
+      .col-sm-4
+        input.form-control(type='location', name='location', id='location', value='#{player.profile.location}')
+    .form-group
+      label.col-sm-3.control-label(for='name') name
+      .col-sm-4
+        input.form-control(type='name', name='name', id='name', value='#{player.profile.name}')
+    .form-group
+      label.col-sm-3.control-label(for='picture') picture
+      .col-sm-4
+        input.form-control(type='picture', name='picture', id='picture', value='#{player.profile.picture}')
+    .form-group
+      label.col-sm-3.control-label(for='player') player
+      .col-sm-4
+        input.form-control(type='player', name='player', id='player', value='#{player.profile.player}')
+    .form-group
+      label.col-sm-3.control-label(for='postal') postal
+      .col-sm-4
+        input.form-control(type='postal', name='postal', id='postal', value='#{player.profile.postal}')
+    .form-group
+      label.col-sm-3.control-label(for='rank') rank
+      .col-sm-4
+        input.form-control(type='rank', name='rank', id='rank', value='#{player.profile.rank}')
+    .form-group
+      label.col-sm-3.control-label(for='region') region
+      .col-sm-4
+        input.form-control(type='region', name='region', id='region', value='#{player.profile.region}')
+    .form-group
+      label.col-sm-3.control-label(for='server_tokens') server_tokens
+      .col-sm-4
+        input.form-control(type='server_tokens', name='server_tokens', id='server_tokens', value='#{player.profile.server_tokens}')
+    .form-group
+      label.col-sm-3.control-label(for='starbound_password') starbound_password
+      .col-sm-4
+        input.form-control(type='starbound_password', name='starbound_password', id='starbound_password', value='#{player.profile.starbound_password}')
+    //- if system !== undefined
+      .form-group
+        label.col-sm-3.control-label(for='system.worlds') system.worlds
+        .col-sm-4
+          input.form-control(type='system.worlds', name='system.worlds', id='system.worlds', value='#{player.profile.system.worlds}')
+      .form-group
+        label.col-sm-3.control-label(for='system.size') system.size
+        .col-sm-4
+          input.form-control(type='system.size', name='system.size', id='system.size', value='#{player.profile.system.size}')
+      .form-group
+        label.col-sm-3.control-label(for='system.planet') system.planet
+        .col-sm-4
+          input.form-control(type='system.planet', name='system.planet', id='system.planet', value='#{player.profile.system.planet}')
+      .form-group
+        label.col-sm-3.control-label(for='system.z') system.z
+        .col-sm-4
+          input.form-control(type='system.z', name='system.z', id='system.z', value='#{player.profile.system.z}')
+      .form-group
+        label.col-sm-3.control-label(for='system.y') system.y
+        .col-sm-4
+          input.form-control(type='system.y', name='system.y', id='system.y', value='#{player.profile.system.y}')
+      .form-group
+        label.col-sm-3.control-label(for='system.x') system.x
+        .col-sm-4
+          input.form-control(type='system.x', name='system.x', id='system.x', value='#{player.profile.system.x}')
+      .form-group
+        label.col-sm-3.control-label(for='system.sector') system.sector
+        .col-sm-4
+          input.form-control(type='system.sector', name='system.sector', id='system.sector', value='#{player.profile.system.sector}')
+    .form-group
+      label.col-sm-3.control-label(for='system_coords') system_coords
+      .col-sm-4
+        input.form-control(type='system_coords', name='system_coords', id='system_coords', value='#{player.profile.system_coords}')
+    .form-group
+      label.col-sm-3.control-label(for='thismonth_votes') thismonth_votes
+      .col-sm-4
+        input.form-control(type='thismonth_votes', name='thismonth_votes', id='thismonth_votes', value='#{player.profile.thismonth_votes}')
+    .form-group
+      label.col-sm-3.control-label(for='website') website
+      .col-sm-4
+        input.form-control(type='website', name='website', id='website', value='#{player.profile.website}')
+    .form-group
+      label.col-sm-3.control-label(for='gender') gender
+      .col-sm-4
+        label.radio
+          input(type='radio', checked=player.profile.gender=='male', name='gender', value='male', data-toggle='radio')
+          span Male
+        label.radio
+          input(type='radio', checked=player.profile.gender=='female', name='gender', value='female', data-toggle='radio')
+          span Female
+    .form-group
+      label.col-sm-3.control-label(for='gravatar') Gravatar
+      .col-sm-4
+        img(src="#{player.profile.gravatar()}", class='profile', width='100', height='100')
+    .form-group
+      .col-sm-offset-3.col-sm-4
+        button.btn.btn.btn-primary(type='submit')
+          i.fa.fa-magnet
+          | Update Profile
+  .page-header
+    h3 Delete Account
+  p Keep in mind this action is 
+    span.text-error irreversible
+    | .
+  form(action='/account/delete', method='POST')
+    input(type='hidden', name='_csrf', value=token)
+    button.btn.btn-danger(type='submit')
+      i.fa.fa-trash-o
+      | Delete thie account

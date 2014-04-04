@@ -107,6 +107,8 @@ app.get('/', homeController.index);
 
 app.get('/worlds', passportConf.isAuthenticated, worldsController.index);
 app.get('/players', passportConf.isAuthenticated, playersController.index);
+app.get('/player/:email', passportConf.isAuthenticated, playersController.edit);
+app.post('/player/:email', passportConf.isAuthenticated, playersController.save);
 app.get('/users', passportConf.isAuthenticated, usersController.index);
 app.get('/purchases', passportConf.isAuthenticated, purchasesController.index);
 

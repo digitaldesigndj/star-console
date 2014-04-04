@@ -32,7 +32,8 @@ block content
           each player in players
             tr
               td #{player.profile.player}
-              td #{player.email}
+              td 
+                a(href='/player/#{player.email}') #{player.email}
               td #{player.profile.rank}
               td 
                 - var forum_url = 'http://forum.boundstar.com/user/'+player.profile.forum.replace(/ /g,'-').toLowerCase()
