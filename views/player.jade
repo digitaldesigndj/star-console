@@ -8,145 +8,145 @@ block content
     .form-group
       label.col-sm-3.control-label(for='alltime_votes') alltime_votes
       .col-sm-4
-        input.form-control(type='alltime_votes', name='alltime_votes', id='alltime_votes', value='#{player.profile.alltime_votes}')
+        input.form-control(type='alltime_votes', name='alltime_votes', id='alltime_votes', value='#{player.alltime_votes}')
     .form-group
       label.col-sm-3.control-label(for='alt_characters') alt_characters
       .col-sm-4
-        textarea.form-control(type='alt_characters', name='alt_characters', id='alt_characters') #{player.profile.alt_characters}
+        textarea.form-control(type='alt_characters', name='alt_characters', id='alt_characters') #{player.alt_characters}
     .form-group
       label.col-sm-3.control-label(for='city') city
       .col-sm-4
-        input.form-control(type='city', name='city', id='city', value='#{player.profile.city}')
+        input.form-control(type='city', name='city', id='city', value='#{player.city}')
     .form-group
       label.col-sm-3.control-label(for='country') country
       .col-sm-4
-        input.form-control(type='country', name='country', id='country', value='#{player.profile.country}')
+        input.form-control(type='country', name='country', id='country', value='#{player.country}')
     .form-group
       label.col-sm-3.control-label(for='forum') forum
       .col-sm-4
-        input.form-control(type='forum', name='forum', id='forum', value='#{player.profile.forum}')
+        input.form-control(type='forum', name='forum', id='forum', value='#{player.forum}')
     .form-group
       label.col-sm-3.control-label(for='forum_posts') forum_posts
       .col-sm-4
-        input.form-control(type='forum_posts', name='forum_posts', id='forum_posts', value='#{player.profile.forum_posts}')
+        input.form-control(type='forum_posts', name='forum_posts', id='forum_posts', value='#{player.forum_posts}')
     .form-group
       label.col-sm-3.control-label(for='forum_rep') forum_rep
       .col-sm-4
-        input.form-control(type='forum_rep', name='forum_rep', id='forum_rep', value='#{player.profile.forum_rep}')
+        input.form-control(type='forum_rep', name='forum_rep', id='forum_rep', value='#{player.forum_rep}')
     .form-group
       label.col-sm-3.control-label(for='hostname') hostname
       .col-sm-4
-        input.form-control(type='hostname', name='hostname', id='hostname', value='#{player.profile.hostname}')
+        input.form-control(type='hostname', name='hostname', id='hostname', value='#{player.hostname}')
     .form-group
       label.col-sm-3.control-label(for='ip') ip
       .col-sm-4
-        input.form-control(type='ip', name='ip', id='ip', value='#{player.profile.ip}')
+        input.form-control(type='ip', name='ip', id='ip', value='#{player.ip}')
     .form-group
       label.col-sm-3.control-label(for='loc') loc
       .col-sm-4
-        input.form-control(type='loc', name='loc', id='loc', value='#{player.profile.loc}')
+        input.form-control(type='loc', name='loc', id='loc', value='#{player.loc}')
     .form-group
       label.col-sm-3.control-label(for='location') location
       .col-sm-4
-        input.form-control(type='location', name='location', id='location', value='#{player.profile.location}')
+        input.form-control(type='location', name='location', id='location', value='#{player.location}')
     .form-group
       label.col-sm-3.control-label(for='name') name
       .col-sm-4
-        input.form-control(type='name', name='name', id='name', value='#{player.profile.name}')
+        input.form-control(type='name', name='name', id='name', value='#{player.name}')
     .form-group
       label.col-sm-3.control-label(for='picture') picture
       .col-sm-4
-        input.form-control(type='picture', name='picture', id='picture', value='#{player.profile.picture}')
+        input.form-control(type='picture', name='picture', id='picture', value='#{player.picture}')
     .form-group
       label.col-sm-3.control-label(for='player') player
       .col-sm-4
-        input.form-control(type='player', name='player', id='player', value='#{player.profile.player}')
+        input.form-control(type='player', name='player', id='player', value='#{player.player}')
     .form-group
       label.col-sm-3.control-label(for='postal') postal
       .col-sm-4
-        input.form-control(type='postal', name='postal', id='postal', value='#{player.profile.postal}')
+        input.form-control(type='postal', name='postal', id='postal', value='#{player.postal}')
     .form-group
       label.col-sm-3.control-label(for='rank') rank
       .col-sm-4
-        input.form-control(type='rank', name='rank', id='rank', value='#{player.profile.rank}')
+        input.form-control(type='rank', name='rank', id='rank', value='#{player.rank}')
     .form-group
       label.col-sm-3.control-label(for='region') region
       .col-sm-4
-        input.form-control(type='region', name='region', id='region', value='#{player.profile.region}')
+        input.form-control(type='region', name='region', id='region', value='#{player.region}')
     .form-group
       label.col-sm-3.control-label(for='server_tokens') server_tokens
       .col-sm-4
-        input.form-control(type='server_tokens', name='server_tokens', id='server_tokens', value='#{player.profile.server_tokens}')
+        input.form-control(type='server_tokens', name='server_tokens', id='server_tokens', value='#{player.server_tokens}')
     .form-group
       label.col-sm-3.control-label(for='starbound_password') starbound_password
       .col-sm-4
-        input.form-control(type='starbound_password', name='starbound_password', id='starbound_password', value='#{player.profile.starbound_password}')
+        input.form-control(type='starbound_password', name='starbound_password', id='starbound_password', value='#{player.starbound_password}')
     //- if system !== undefined
       .form-group
         label.col-sm-3.control-label(for='system.worlds') system.worlds
         .col-sm-4
-          input.form-control(type='system.worlds', name='system.worlds', id='system.worlds', value='#{player.profile.system.worlds}')
+          input.form-control(type='system.worlds', name='system.worlds', id='system.worlds', value='#{player.system.worlds}')
       .form-group
         label.col-sm-3.control-label(for='system.size') system.size
         .col-sm-4
-          input.form-control(type='system.size', name='system.size', id='system.size', value='#{player.profile.system.size}')
+          input.form-control(type='system.size', name='system.size', id='system.size', value='#{player.system.size}')
       .form-group
         label.col-sm-3.control-label(for='system.planet') system.planet
         .col-sm-4
-          input.form-control(type='system.planet', name='system.planet', id='system.planet', value='#{player.profile.system.planet}')
+          input.form-control(type='system.planet', name='system.planet', id='system.planet', value='#{player.system.planet}')
       .form-group
         label.col-sm-3.control-label(for='system.z') system.z
         .col-sm-4
-          input.form-control(type='system.z', name='system.z', id='system.z', value='#{player.profile.system.z}')
+          input.form-control(type='system.z', name='system.z', id='system.z', value='#{player.system.z}')
       .form-group
         label.col-sm-3.control-label(for='system.y') system.y
         .col-sm-4
-          input.form-control(type='system.y', name='system.y', id='system.y', value='#{player.profile.system.y}')
+          input.form-control(type='system.y', name='system.y', id='system.y', value='#{player.system.y}')
       .form-group
         label.col-sm-3.control-label(for='system.x') system.x
         .col-sm-4
-          input.form-control(type='system.x', name='system.x', id='system.x', value='#{player.profile.system.x}')
+          input.form-control(type='system.x', name='system.x', id='system.x', value='#{player.system.x}')
       .form-group
         label.col-sm-3.control-label(for='system.sector') system.sector
         .col-sm-4
-          input.form-control(type='system.sector', name='system.sector', id='system.sector', value='#{player.profile.system.sector}')
+          input.form-control(type='system.sector', name='system.sector', id='system.sector', value='#{player.system.sector}')
     .form-group
       label.col-sm-3.control-label(for='system_coords') system_coords
       .col-sm-4
-        input.form-control(type='system_coords', name='system_coords', id='system_coords', value='#{player.profile.system_coords}')
+        input.form-control(type='system_coords', name='system_coords', id='system_coords', value='#{player.system_coords}')
     .form-group
       label.col-sm-3.control-label(for='thismonth_votes') thismonth_votes
       .col-sm-4
-        input.form-control(type='thismonth_votes', name='thismonth_votes', id='thismonth_votes', value='#{player.profile.thismonth_votes}')
+        input.form-control(type='thismonth_votes', name='thismonth_votes', id='thismonth_votes', value='#{player.thismonth_votes}')
     .form-group
       label.col-sm-3.control-label(for='website') website
       .col-sm-4
-        input.form-control(type='website', name='website', id='website', value='#{player.profile.website}')
+        input.form-control(type='website', name='website', id='website', value='#{player.website}')
     .form-group
       label.col-sm-3.control-label(for='gender') gender
       .col-sm-4
         label.radio
-          input(type='radio', checked=player.profile.gender=='male', name='gender', value='male', data-toggle='radio')
+          input(type='radio', checked=player.gender=='male', name='gender', value='male', data-toggle='radio')
           span Male
         label.radio
-          input(type='radio', checked=player.profile.gender=='female', name='gender', value='female', data-toggle='radio')
+          input(type='radio', checked=player.gender=='female', name='gender', value='female', data-toggle='radio')
           span Female
     .form-group
       label.col-sm-3.control-label(for='gravatar') Gravatar
       .col-sm-4
-        img(src="#{player.profile.gravatar()}", class='profile', width='100', height='100')
+        img(src="#{player.gravatar()}", class='profile', width='100', height='100')
     .form-group
       .col-sm-offset-3.col-sm-4
         button.btn.btn.btn-primary(type='submit')
           i.fa.fa-magnet
           | Update Profile
-  .page-header
+  //- .page-header
     h3 Delete Account
-  p Keep in mind this action is 
+  //- p Keep in mind this action is 
     span.text-error irreversible
     | .
-  form(action='/account/delete', method='POST')
-    input(type='hidden', name='_csrf', value=token)
+  //- form(action='/account/delete', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
     button.btn.btn-danger(type='submit')
       i.fa.fa-trash-o
       | Delete thie account

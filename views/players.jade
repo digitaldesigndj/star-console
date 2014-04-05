@@ -31,23 +31,23 @@ block content
         tbody
           each player in players
             tr
-              td #{player.profile.player}
+              td #{player.player}
               td 
                 a(href='/player/#{player.email}') #{player.email}
-              td #{player.profile.rank}
+              td #{player.rank}
               td 
-                - var forum_url = 'http://forum.boundstar.com/user/'+player.profile.forum.replace(/ /g,'-').toLowerCase()
-                a(href='#{forum_url}', target='_blank') #{player.profile.forum}
-              td #{player.profile.forum_rep}
-              td #{player.profile.forum_posts}
-              td #{player.profile.thismonth_votes}
-              if player.profile.system
-                td #{player.profile.system.size}
+                - var forum_url = 'http://forum.boundstar.com/user/'+player.forum.replace(/ /g,'-').toLowerCase()
+                a(href='#{forum_url}', target='_blank') #{player.forum}
+              td #{player.forum_rep}
+              td #{player.forum_posts}
+              td #{player.thismonth_votes}
+              if player.system
+                td #{player.system.size}
               else
                 td 0
-              td #{player.profile.ip}
-              td #{player.profile.country}
-              td #{player.profile.region}
-              td #{player.profile.city}
-              td #{player.profile.system_coords}
+              td #{player.ip}
+              td #{player.country}
+              td #{player.region}
+              td #{player.city}
+              td #{player.system_coords}
 
